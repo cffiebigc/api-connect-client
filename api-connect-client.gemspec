@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "api/connect/client/version"
+require "api_connect_client"
 
 Gem::Specification.new do |spec|
   spec.name          = "api-connect-client"
-  spec.version       = Api::Connect::Client::VERSION
+  spec.version       = ApiConnectClient::VERSION
   spec.authors       = ["Carlos Fiebig"]
   spec.email         = ["cffiebigc@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = 'Client to interact with IBM Api Connect'
+  spec.description   = 'Client to interact with IBM Api Connect'
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16.a"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "pry"
 end
