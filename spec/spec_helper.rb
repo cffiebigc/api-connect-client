@@ -1,5 +1,7 @@
-require "bundler/setup"
-require "api/connect/client"
+require 'bundler/setup'
+require 'api_connect_client'
+require_relative './support/product_helper'
+require 'pry'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,4 +13,5 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+  config.include ProductHelper
 end
