@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.apiconnect.ibmcloud.com/v1/portal/products/5a0211480cf2b9aa64c1fd5d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.ibm-apim.product+json
+      User-Agent:
+      - Ruby
+      Host:
+      - us.apiconnect.ibmcloud.com
+      X-Ibm-Apimanagement-Context:
+      - bci-api-developers-sandbox-desarrollo.local-registry
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Nov 2017 15:49:44 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=15768000
+      Pragma:
+      - No-cache
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      Content-Type:
+      - application/vnd.ibm-apim.product+json
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      X-Apim:
+      - 169.46.136.212
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJwcm9kdWN0IiA6ICIxLjAuMCIsCiAgImluZm8iIDogewogICAgIm5h
+        bWUiIDogImJlbmVmaWNpb3MiLAogICAgInRpdGxlIiA6ICJCZW5lZmljaW9z
+        IiwKICAgICJ2ZXJzaW9uIiA6ICIxLjAuMSIsCiAgICAiZGVzY3JpcHRpb24i
+        IDogIkNvbnN1bHRhIGVsIGFiYW5pY28gZGUgYmVuZWZpY2lvcyBvZnJlY2lk
+        b3MgYSBjbGllbnRlcyBkZWwgYmFuY286IGRlc2N1ZW50b3MsIHByb2R1Y3Rv
+        cyBwcmVmZXJlbmNpYWxlcyB5IG3DoXMiCiAgfSwKICAiYXBpcyIgOiB7CiAg
+        ICAiZGVzY3VlbnRvcyIgOiB7CiAgICAgICJuYW1lIiA6ICJkZXNjdWVudG9z
+        LXNob3BwaW5nOjEuMC4wIgogICAgfSwKICAgICJwcm9kdWN0b3MtdGllbmRh
+        IiA6IHsKICAgICAgIm5hbWUiIDogInByb2R1Y3Rvcy10aWVuZGE6MS4wLjAi
+        CiAgICB9LAogICAgImRlc2N1ZW50b3Mtc2FsdWQteS1iZWxsZXphIiA6IHsK
+        ICAgICAgIm5hbWUiIDogImRlc2N1ZW50b3Mtc2FsdWQteS1iZWxsZXphOjEu
+        MC4wIgogICAgfSwKICAgICJkZXNjdWVudG9zLXZlbnRhLW9ubGluZSIgOiB7
+        CiAgICAgICJuYW1lIiA6ICJkZXNjdWVudG9zLXZlbnRhLW9ubGluZToxLjAu
+        MCIKICAgIH0sCiAgICAiZGVzY3VlbnRvcy1wYW5vcmFtYXMiIDogewogICAg
+        ICAibmFtZSIgOiAiZGVzY3VlbnRvcy1wYW5vcmFtYXM6MS4wLjAiCiAgICB9
+        LAogICAgImRlc2N1ZW50b3Mtc2Fib3JlcyIgOiB7CiAgICAgICJuYW1lIiA6
+        ICJkZXNjdWVudG9zLXNhYm9yZXM6MS4wLjAiCiAgICB9CiAgfSwKICAicGxh
+        bnMiIDogewogICAgImRlZmF1bHQiIDogewogICAgICAidGl0bGUiIDogIkRl
+        ZmF1bHQgUGxhbiIsCiAgICAgICJkZXNjcmlwdGlvbiIgOiAiRGVmYXVsdCBQ
+        bGFuIiwKICAgICAgImFwcHJvdmFsIiA6IGZhbHNlLAogICAgICAicmF0ZS1s
+        aW1pdCIgOiB7CiAgICAgICAgImhhcmQtbGltaXQiIDogZmFsc2UsCiAgICAg
+        ICAgInZhbHVlIiA6ICIxMDAvaG91ciIKICAgICAgfQogICAgfQogIH0KfQ==
+    http_version: 
+  recorded_at: Tue, 14 Nov 2017 15:49:44 GMT
+recorded_with: VCR 3.0.3
