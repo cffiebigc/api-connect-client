@@ -1,6 +1,6 @@
 class Product < Base
   def initialize
-    @headers = { 'X-IBM-APIManagement-Context': 'bci-api-developers-sandbox-desarrollo.local-registry' }
+    @headers = { 'X-IBM-APIManagement-Context': ENV['BLUEMIX_CONTEXT'] }
   end
 
   def all
