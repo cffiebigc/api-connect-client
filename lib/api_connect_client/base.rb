@@ -15,8 +15,8 @@ class Base
   def get(path, params = {})
     uri = URI("#{ENDPOINT}#{path}?#{URI.encode_www_form(params)}")
     req = Net::HTTP::Get.new(uri)
-    set_headers_for(req)
-    res = Net::HTTP.start(uri.hostname, uri.port, { use_ssl: true }) { |http| http.request(req) }
+    headers_for(req)
+    res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
     JSON.parse(res.body)
   end
 
@@ -24,9 +24,9 @@ class Base
     # TODO
   end
 
-  def set_headers_for(request)
+  def headers_for(request)
     @headers.to_a.each do |header|
-      request[ header[0] ] = header[1]
+      request[header[0]] = header[1]
     end
   end
 end
