@@ -12,9 +12,10 @@ class Base
 
   private
 
-  def get(path, params = {})
+  def get(path, user = nil, pass = nil, params = {})
     uri = URI("#{ENDPOINT}#{path}?#{URI.encode_www_form(params)}")
     req = Net::HTTP::Get.new(uri)
+    req.basic_auth(user, pass) unless user.nil? || pass.nil?
     headers_for(req)
     res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
     JSON.parse(res.body)
