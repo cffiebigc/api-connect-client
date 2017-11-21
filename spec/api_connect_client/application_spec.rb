@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Application do
-	let(:app) { Application.new(ENV['SAMPLE_ORG_ID'], ENV['SAMPLE_USERNAME'], ENV['SAMPLE_PASSWORD']) }
+  let(:app) { Application.new(ENV['SAMPLE_ORG_ID'], ENV['SAMPLE_USERNAME'], ENV['SAMPLE_PASSWORD']) }
 
   describe '#all', vcr: { cassette_name: 'applications' } do
     it "returns all applications of the given organization" do
@@ -23,6 +23,13 @@ RSpec.describe Application do
       }
       result = app.create(body.to_json)
       expect(result['name']).to eq('Demo')
+    end
+  end
+
+  describe '#show', vcr: { cassette_name: 'application-show' } do
+    it "returns info of an application" do
+      result = app.show(ENV['SAMPLE_APP_ID'])
+      expect(result["name"]).to eq("Demo")
     end
   end
 end

@@ -11,4 +11,8 @@ class Application < Base
   def create(body)
     post("/orgs/#{@owner[:id]}/apps", body, @owner[:username], @owner[:password])
   end
+
+  def show(app_id)
+    get("/orgs/#{@owner[:id]}/apps/#{app_id}", @owner[:username], @owner[:password])
+  end
 end
