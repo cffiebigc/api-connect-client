@@ -32,4 +32,20 @@ RSpec.describe Application do
       expect(result["name"]).to eq("Demo")
     end
   end
+
+  describe '#update', vcr: { cassette_name: 'application-update' } do
+    it "update application info" do
+      body = {
+        "name" => "Demo",
+        "appImageURL" => "https://something.com/empty.jpg",
+        "description" => "pro demo app",
+        "oauthRedirectURI" => "https://advanced.demo.cl",
+        "public" => true
+      }
+      result = app.update(ENV['SAMPLE_APP_ID'], body.to_json)
+      expect(result["appImageURL"]).to eq("https://something.com/empty.jpg")
+      expect(result["oauthRedirectURI"]).to eq("https://advanced.demo.cl")
+    end
+  end
+
 end
