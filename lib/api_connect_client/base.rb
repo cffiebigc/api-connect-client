@@ -21,9 +21,10 @@ class Base
     JSON.parse(res.body)
   end
 
-  def post(path, body, params = {})
+  def post(path, body, user = nil, pass = nil, params = {})
     uri = URI("#{ENDPOINT}#{path}?#{URI.encode_www_form(params)}")
     req = Net::HTTP::Post.new(uri)
+    req.basic_auth(user, pass) unless user.nil? || pass.nil?
     headers_for(req)
     req.content_type = 'application/json'
     req.body = body
