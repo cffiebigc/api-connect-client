@@ -32,6 +32,17 @@ class Base
     JSON.parse(res.body)
   end
 
+  def put(path, body, user = nil, pass = nil, params = {})
+    uri = URI("#{ENDPOINT}#{path}?#{URI.encode_www_form(params)}")
+    req = Net::HTTP::Put.new(uri)
+    req.basic_auth(user, pass) unless user.nil? || pass.nil?
+    headers_for(req)
+    req.content_type = 'application/json'
+    req.body = body
+    res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
+    JSON.parse(res.body)
+  end
+
   def headers_for(request)
     @headers.to_a.each do |header|
       request[header[0]] = header[1]
