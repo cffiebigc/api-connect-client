@@ -48,4 +48,16 @@ RSpec.describe Application do
     end
   end
 
+  describe '#update_credentials', vcr: { cassette_name: 'application-update-credentials' } do
+    it "update application credentials" do
+      body = {
+        "clientID" => ENV['NEW_CLIENT_ID'],
+        "clientSecret" => ENV['NEW_CLIENT_SECRET'],
+        "description" => "App with new credentials"
+      }
+      result = app.update_credentials(ENV['SAMPLE_APP_ID'], body.to_json)
+      expect(result["clientID"]).to eq(ENV['NEW_CLIENT_ID'])
+      expect(result["clientSecret"]).to eq("*******************************************")
+    end
+  end
 end

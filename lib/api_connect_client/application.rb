@@ -19,4 +19,8 @@ class Application < Base
   def update(app_id, body)
     put("/orgs/#{@owner[:id]}/apps/#{app_id}", body, @owner[:username], @owner[:password])
   end
+
+  def update_credentials(app_id, body)
+    put("/orgs/#{@owner[:id]}/apps/#{app_id}/credentials", body, @owner[:username], @owner[:password])
+  end
 end
