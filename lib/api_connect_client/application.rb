@@ -23,4 +23,14 @@ class Application < Base
   def update_credentials(app_id, body)
     put("/orgs/#{@owner[:id]}/apps/#{app_id}/credentials", body, @owner[:username], @owner[:password])
   end
+
+  def subscribe(app_id, product_id)
+    body = {
+      "plan" => "default",
+      "product" => {
+        "id" => product_id
+      }
+    }
+    post("/orgs/#{@owner[:id]}/apps/#{app_id}/subscriptions", body.to_json, @owner[:username], @owner[:password])
+  end
 end

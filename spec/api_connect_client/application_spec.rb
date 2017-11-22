@@ -60,4 +60,12 @@ RSpec.describe Application do
       expect(result["clientSecret"]).to eq("*******************************************")
     end
   end
+
+  describe '#subscribe', vcr: { cassette_name: 'application-subscribe' } do
+    it "subscribe an application to a plan" do
+      result = app.subscribe(ENV['SAMPLE_APP_ID'], ENV["PRODUCT_ID"])
+      expect(result['app']['name']).to eq('Demo')
+      expect(result['product']['id']).to eq(ENV["PRODUCT_ID"])
+    end
+  end
 end
