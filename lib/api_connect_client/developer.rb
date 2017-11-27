@@ -1,5 +1,5 @@
 module ApiConnectClient
-  class Client
+  class Developer
     def initialize(username, password, organization_id)
       @headers = {
         'X-IBM-APIManagement-Context': ENV['BLUEMIX_CONTEXT']
