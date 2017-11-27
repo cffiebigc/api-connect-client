@@ -24,13 +24,7 @@ class Application < Base
     put("/orgs/#{@owner[:id]}/apps/#{app_id}/credentials", body, @owner[:username], @owner[:password])
   end
 
-  def subscribe(app_id, product_id)
-    body = {
-      "plan" => "default",
-      "product" => {
-        "id" => product_id
-      }
-    }
-    post("/orgs/#{@owner[:id]}/apps/#{app_id}/subscriptions", body.to_json, @owner[:username], @owner[:password])
+  def subscribe(app_id, body)
+    post("/orgs/#{@owner[:id]}/apps/#{app_id}/subscriptions", body, @owner[:username], @owner[:password])
   end
 end
