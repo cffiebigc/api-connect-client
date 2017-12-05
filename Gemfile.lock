@@ -45,13 +45,13 @@ PLATFORMS
 
 DEPENDENCIES
   api-connect-client!
-  bundler (~> 1.16.a)
-  dotenv
-  pry
+  bundler (~> 1.16)
+  dotenv (~> 2.2)
+  pry (~> 0.11.3)
   rake (~> 10.0)
   rspec (~> 3.0)
-  vcr
-  webmock
+  vcr (~> 3.0)
+  webmock (~> 3.1)
 
 BUNDLED WITH
    1.16.0

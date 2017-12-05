@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["cffiebigc@gmail.com"]
 
   spec.summary       = 'Client to interact with IBM Api Connect'
-  spec.description   = 'Client to interact with IBM Api Connect'
+  spec.description   = 'Manager and Developer from IBM Api Connect to interact with te developer portal REST APIs'
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -30,11 +30,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.16.a"
+  spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "pry"
-  spec.add_development_dependency "webmock"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "dotenv"
+  spec.add_development_dependency "pry", '~> 0.11.3'
+  spec.add_development_dependency "webmock", '~> 3.1'
+  spec.add_development_dependency "vcr", '~> 3.0'
+  spec.add_development_dependency "dotenv", '~> 2.2'
 end
