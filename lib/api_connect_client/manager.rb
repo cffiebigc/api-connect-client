@@ -1,5 +1,5 @@
 module ApiConnectClient
-  class Admin
+  class Manager
     def initialize(admin_user, admin_pass)
       @admin_user = "apimanager/#{admin_user}"
       @admin_pass = admin_pass
@@ -18,12 +18,12 @@ module ApiConnectClient
     end
 
     def list_products
-      product = Product.new
+      product = ApiConnectClient::Product.new
       product.all
     end
 
     def show_product(product_id)
-      product = Product.new
+      product = ApiConnectClient::Product.new
       product.show(product_id)
     end
   end
