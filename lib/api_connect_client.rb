@@ -1,6 +1,6 @@
 require "api_connect_client/version"
 
-module ActiveImporter
+module ApiConnectClient
   require_relative './api_connect_client/base'
   require_relative './api_connect_client/product'
   require_relative './api_connect_client/user'
