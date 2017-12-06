@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    api-connect-client (0.1.0)
+    api_connect_client (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -44,7 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  api-connect-client!
+  api_connect_client!
   bundler (~> 1.16)
   dotenv (~> 2.2)
   pry (~> 0.11.3)
