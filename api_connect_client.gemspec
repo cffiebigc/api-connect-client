@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "api_connect_client"
 
 Gem::Specification.new do |spec|
-  spec.name          = "api-connect-client"
+  spec.name          = "api_connect_client"
   spec.version       = ApiConnectClient::VERSION
   spec.authors       = ["Carlos Fiebig"]
   spec.email         = ["cffiebigc@gmail.com"]
 
   spec.summary       = 'Client to interact with IBM Api Connect'
   spec.description   = 'Manager and Developer from IBM Api Connect to interact with te developer portal REST APIs'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/mariowise/api-connect-client"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
