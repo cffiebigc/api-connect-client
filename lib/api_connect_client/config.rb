@@ -17,6 +17,19 @@ module ApiConnectClient
       def endpoint
         @endpoint ||= 'https://us.apiconnect.ibmcloud.com/v1/portal'
       end
+
+      def register_manager_credentials(username, password)
+        @manager_username = username
+        @manager_password = password
+      end
+
+      def manager_username
+        @manager_username ||= ''
+      end
+
+      def manager_password
+        @manager_password ||= ''
+      end
     end
   end
 end

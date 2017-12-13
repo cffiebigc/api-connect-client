@@ -1,8 +1,8 @@
 module ApiConnectClient
   class Manager
-    def initialize(admin_user, admin_pass)
-      @admin_user = "apimanager/#{admin_user}"
-      @admin_pass = admin_pass
+    def initialize(admin_user = nil , admin_pass = nil)
+      @admin_user = "apimanager/#{admin_user || ApiConnectClient::Config.manager_username }"
+      @admin_pass = admin_pass || ApiConnectClient::Config.manager_password
     end
 
     def create_developer(first_name, last_name, organization_name, username, password)
