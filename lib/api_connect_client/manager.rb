@@ -5,7 +5,7 @@ module ApiConnectClient
       @admin_pass = admin_pass || ApiConnectClient::Config.manager_password
     end
 
-    def create_developer(first_name, last_name, organization_name, username, password)
+    def create_developer(username, password, first_name = '', last_name = '', organization_name = '')
       body = {
         "firstName" => first_name,
         "lastName" => last_name,
