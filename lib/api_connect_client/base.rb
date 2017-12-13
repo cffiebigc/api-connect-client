@@ -5,7 +5,7 @@ module ApiConnectClient
   class Base
 
     def initialize
-      @endpoint = Config.endpoint
+      @endpoint = ApiConnectClient::Config.endpoint
     end
 
     private

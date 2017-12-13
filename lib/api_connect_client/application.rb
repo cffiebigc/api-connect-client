@@ -1,8 +1,8 @@
 module ApiConnectClient
   class Application < Base
     def initialize(org_id, user, pass)
-      super
-      @headers = { 'X-IBM-APIManagement-Context': Config.context }
+      super()
+      @headers = { 'X-IBM-APIManagement-Context': ApiConnectClient::Config.context }
       @owner = { id: org_id, username: user, password: pass }
     end
 

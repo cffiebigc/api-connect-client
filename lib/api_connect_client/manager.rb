@@ -13,7 +13,9 @@ module ApiConnectClient
         "password" => password,
         "username" => username
       }
-      user = User.new(@admin_user, @admin_pass)
+      user = ApiConnectClient::User.new(@admin_user, @admin_pass)
+      p 'aqui voy'
+      p user
       user.create(body.to_json)
     end
 

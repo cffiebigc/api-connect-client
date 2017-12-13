@@ -2,7 +2,7 @@ module ApiConnectClient
   class Developer
     def initialize(username, password, organization_id)
       @headers = {
-        'X-IBM-APIManagement-Context': Config.context
+        'X-IBM-APIManagement-Context': ApiConnectClient::Config.context
       }
       @username = username
       @password = password
@@ -20,17 +20,17 @@ module ApiConnectClient
         "oauthRedirectURI" => oauth_redirect_url,
         "public" => public_app
       }
-      app = Application.new(@@organization_id, @username, @password)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.create(body.to_json)
     end
 
     def list_applications
-      app = Application.new(@@organization_id, @username, @password)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.all
     end
 
     def show_application(app_id)
-      app = Application.new(@@organization_id, @username, @password)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.show(app_id)
     end
 
@@ -42,7 +42,7 @@ module ApiConnectClient
         "oauthRedirectURI" => oauth_redirect_uri,
         "public" => public_app
       }
-      app = Application.new(@@organization_id, @username, @password)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.update(app_id, body.to_json)
     end
 
@@ -51,7 +51,7 @@ module ApiConnectClient
         "clientID" => client_id,
         "clientSecret" => client_secret
       }
-      app = Application.new(@@organization_id, @username, @password)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.update_credentials(app_id, body.to_json)
     end
 
@@ -62,7 +62,7 @@ module ApiConnectClient
           "id" => product_id
         }
       }
-      app = Application.new(@@organization_id, @username, @password)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.subscribe(app_id, body.to_json)
     end
   end

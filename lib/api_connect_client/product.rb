@@ -1,8 +1,8 @@
 module ApiConnectClient
   class Product < Base
     def initialize
-      super
-      @headers = { 'X-IBM-APIManagement-Context': Config.context }
+      super()
+      @headers = { 'X-IBM-APIManagement-Context': ApiConnectClient::Config.context }
     end
 
     def all

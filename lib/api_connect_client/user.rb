@@ -1,9 +1,9 @@
 module ApiConnectClient
   class User < Base
     def initialize(admin_user, admin_pass)
-      super
+      super()
       @headers = {
-        'X-IBM-APIManagement-Context': Config.context
+        'X-IBM-APIManagement-Context': ApiConnectClient::Config.context
       }
       @admin_user = admin_user
       @admin_pass = admin_pass
