@@ -5,7 +5,7 @@ module ApiConnectClient
       @admin_pass = admin_pass
     end
 
-    def create_user(first_name, last_name, organization_name, username, password)
+    def create_developer(first_name, last_name, organization_name, username, password)
       body = {
         "firstName" => first_name,
         "lastName" => last_name,
@@ -14,8 +14,6 @@ module ApiConnectClient
         "username" => username
       }
       user = ApiConnectClient::User.new(@admin_user, @admin_pass)
-      p 'aqui voy'
-      p user
       user.create(body.to_json)
     end
 
