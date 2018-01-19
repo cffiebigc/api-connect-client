@@ -41,6 +41,15 @@ module ApiConnectClient
       JSON.parse(res.body)
     end
 
+    def delete(path, user = nil, pass = nil, params = {})
+      uri = URI("#{@endpoint}#{path}?#{URI.encode_www_form(params)}")
+      req = Net::HTTP::Delete.new(uri)
+      req.basic_auth(user, pass) unless user.nil? || pass.nil?
+      headers_for(req)
+      res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
+      JSON.parse(res.body)
+    end
+
     def headers_for(request)
       @headers.to_a.each do |header|
         request[header[0]] = header[1]
