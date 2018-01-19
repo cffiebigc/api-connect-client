@@ -47,7 +47,7 @@ module ApiConnectClient
       req.basic_auth(user, pass) unless user.nil? || pass.nil?
       headers_for(req)
       res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
-      JSON.parse(res.body)
+      JSON.parse(res.body) unless res.body.nil?
     end
 
     def headers_for(request)
