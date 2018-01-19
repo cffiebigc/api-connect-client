@@ -18,6 +18,10 @@ module ApiConnectClient
       get("/orgs/#{@owner[:id]}/apps/#{app_id}", @owner[:username], @owner[:password])
     end
 
+    def delete(app_id)
+      delete("/orgs/#{@owner[:id]}/apps/#{app_id}", @owner[:username], @owner[:password])
+    end
+
     def update(app_id, body)
       put("/orgs/#{@owner[:id]}/apps/#{app_id}", body, @owner[:username], @owner[:password])
     end
