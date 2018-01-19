@@ -18,7 +18,7 @@ module ApiConnectClient
       get("/orgs/#{@owner[:id]}/apps/#{app_id}", @owner[:username], @owner[:password])
     end
 
-    def delete(app_id)
+    def remove(app_id)
       delete("/orgs/#{@owner[:id]}/apps/#{app_id}", @owner[:username], @owner[:password])
     end
 

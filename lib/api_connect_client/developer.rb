@@ -31,7 +31,7 @@ module ApiConnectClient
 
     def delete_application(app_id)
       app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
-      app.delete(app_id)
+      app.remove(app_id)
     end
 
     def show_application(app_id)
