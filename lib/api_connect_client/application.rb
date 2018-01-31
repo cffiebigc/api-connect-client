@@ -33,5 +33,13 @@ module ApiConnectClient
     def subscribe(app_id, body)
       post("/orgs/#{@owner[:id]}/apps/#{app_id}/subscriptions", body, @owner[:username], @owner[:password])
     end
+
+    def list_subscriptions(app_id)
+      get("/orgs/#{@owner[:id]}/apps/#{app_id}/subscriptions", @owner[:username], @owner[:password])
+    end
+
+    def unsubscribe(app_id, subscription_id)
+      delete("/orgs/#{@owner[:id]}/apps/#{app_id}/subscriptions/#{subscription_id}", @owner[:username], @owner[:password])
+    end
   end
 end

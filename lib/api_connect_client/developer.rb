@@ -70,5 +70,15 @@ module ApiConnectClient
       app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.subscribe(app_id, body.to_json)
     end
+
+    def list_application_subscriptions(app_id)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
+      app.list_subscriptions(app_id)
+    end
+
+    def unsubscribe_application(app_id, subscription_id)
+      app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
+      app.unsubscribe(app_id, subscription_id)
+    end
   end
 end
