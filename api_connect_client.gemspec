@@ -22,4 +22,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.3.0'
 
   spec.add_runtime_dependency "json", '~> 2.1', '>= 2.1.0'
+
+  spec.requirements << 'IBM Cloud account (a.k.a bluemix)'
+  spec.requirements << 'Api Connect product in IBM Cloud'
+  spec.requirements << 'Products catalog (local registry or authentication)'
 end
