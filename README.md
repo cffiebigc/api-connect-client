@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/api_connect_client.svg)](https://badge.fury.io/rb/api_connect_client)
+
 # Api Connect Client
 
 This gem is used to interact with the [Developer Portal REST APIs](https://www.ibm.com/support/knowledgecenter/en/SSFS6T/com.ibm.apic.apirest.doc/dev_portal_apis.html)
