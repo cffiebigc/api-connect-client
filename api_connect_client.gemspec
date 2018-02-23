@@ -11,18 +11,8 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Client to interact with IBM Api Connect'
   spec.description   = 'Manager and Developer from IBM Api Connect to interact with te developer portal REST APIs'
-  spec.homepage      = "https://github.com/mariowise/api-connect-client"
+  spec.homepage      = "https://github.com/cffiebigc/api-connect-client"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
-
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
