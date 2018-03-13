@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID/subscriptions
+    body:
+      encoding: UTF-8
+      string: '{"plan":"default","product":{"id":"PRODUCT_ID"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - us.apiconnect.ibmcloud.com
+      Authorization:
+      - Basic U0FNUExFX1VTRVJOQU1FOlNBTVBMRV9QQVNTV09SRA==
+      X-Ibm-Apimanagement-Context:
+      - bci-api-developers-sandbox-desarrollo.local-registry
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 22 Nov 2017 12:51:20 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Content-Location:
+      - https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID/subscriptions/5a1572c20cf2cc309753026a
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      X-Apim:
+      - 169.55.21.17
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"5a1572c20cf2cc309753026a","app":{"id":"SAMPLE_APP_ID","name":"Demo"},"product":{"id":"PRODUCT_ID","name":"credito-consumo","version":"1.0.2"},"plan":"default","approved":true,"createdAt":"2017-11-22T12:51:14.455+0000","updatedAt":"2017-11-22T12:51:14.455+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID/subscriptions/5a1572c20cf2cc309753026a"}'
+    http_version: 
+  recorded_at: Wed, 22 Nov 2017 12:51:20 GMT
+recorded_with: VCR 3.0.3

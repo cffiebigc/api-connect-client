@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.apiconnect.ibmcloud.com/v1/portal/products
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - us.apiconnect.ibmcloud.com
+      X-Ibm-Apimanagement-Context:
+      - bci-api-developers-sandbox-desarrollo.local-registry
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Nov 2017 11:53:07 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=15768000
+      Pragma:
+      - No-cache
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      X-Apim:
+      - 169.46.136.212
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOiI1YTAyMTE0ODBjZjJiOWFhNjRjMWZkNWQiLCJpbmZvIjp7Im5h
+        bWUiOiJiZW5lZmljaW9zIiwidGl0bGUiOiJCZW5lZmljaW9zIiwidmVyc2lv
+        biI6IjEuMC4xIiwiZGVzY3JpcHRpb24iOiJDb25zdWx0YSBlbCBhYmFuaWNv
+        IGRlIGJlbmVmaWNpb3Mgb2ZyZWNpZG9zIGEgY2xpZW50ZXMgZGVsIGJhbmNv
+        OiBkZXNjdWVudG9zLCBwcm9kdWN0b3MgcHJlZmVyZW5jaWFsZXMgeSBtw6Fz
+        In0sInVybCI6Imh0dHBzOi8vdXMuYXBpY29ubmVjdC5pYm1jbG91ZC5jb20v
+        djEvcG9ydGFsL3Byb2R1Y3RzLzVhMDIxMTQ4MGNmMmI5YWE2NGMxZmQ1ZCIs
+        InN0YXR1cyI6InB1Ymxpc2hlZCJ9LHsiaWQiOiI1YTAyMTFkZTBjZjJiOWFh
+        NjRjMWZlMmQiLCJpbmZvIjp7Im5hbWUiOiJjcmVkaXRvLWNvbnN1bW8iLCJ0
+        aXRsZSI6IkNyw6lkaXRvcyBkZSBjb25zdW1vIiwidmVyc2lvbiI6IjEuMC4y
+        IiwiZGVzY3JpcHRpb24iOiJTaW11bGEgY3LDqWRpdG9zIGRlIGNvbnN1bW8g
+        cGFyYSB0dXMgdXN1YXJpb3MiLCJjYXRlZ29yaWVzIjpbIm1vY2siXX0sInVy
+        bCI6Imh0dHBzOi8vdXMuYXBpY29ubmVjdC5pYm1jbG91ZC5jb20vdjEvcG9y
+        dGFsL3Byb2R1Y3RzLzVhMDIxMWRlMGNmMmI5YWE2NGMxZmUyZCIsInN0YXR1
+        cyI6InB1Ymxpc2hlZCJ9XQ==
+    http_version: 
+  recorded_at: Wed, 15 Nov 2017 11:53:08 GMT
+recorded_with: VCR 3.0.3

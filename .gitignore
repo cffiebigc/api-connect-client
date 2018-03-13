@@ -6,7 +6,6 @@
 /pkg/
 /spec/reports/
 /tmp/
-/spec/cassettes
 # rspec failure tracking
 .rspec_status
 

@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - us.apiconnect.ibmcloud.com
+      Authorization:
+      - Basic U0FNUExFX1VTRVJOQU1FOlNBTVBMRV9QQVNTV09SRA==
+      X-Ibm-Apimanagement-Context:
+      - bci-api-developers-sandbox-desarrollo.local-registry
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Nov 2017 13:38:51 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Pragma:
+      - No-cache
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      X-Apim:
+      - 169.55.21.17
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"type":"PRODUCTION","promoteTo":null,"id":"5a0209aa0cf2b9aa64c1f8f9","name":"DemoApp","orgID":"SAMPLE_ORG_ID","public":false,"description":"Eso
+        eso","credentials":{"clientID":"dbd048ab-7acc-4d4d-b0b9-101f04c3ea0f","clientSecret":"********************************************","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a0209aa0cf2b9aa64c1f8f9/credentials"},"appCredentials":[{"id":"5a0209ab0cf2b9aa64c1f8fa","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a0209aa0cf2b9aa64c1f8f9/credentials/5a0209ab0cf2b9aa64c1f8fa","clientID":"dbd048ab-7acc-4d4d-b0b9-101f04c3ea0f","clientSecret":"********************************************"}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":"","oauthRedirectURI":"http://asd.cl","certificate":null,"createdAt":"2017-11-07T19:29:47.347+0000","updatedAt":"2017-11-07T19:29:47.347+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a0209aa0cf2b9aa64c1f8f9"},{"type":"PRODUCTION","promoteTo":null,"id":"5a12f0510cf26485445ec451","name":"DemoApp2","orgID":"SAMPLE_ORG_ID","public":false,"description":"Eso
+        eso","credentials":{"clientID":"7d38dac3-6a92-4796-8103-5505ce85a7df","clientSecret":null,"description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f0510cf26485445ec451/credentials"},"appCredentials":[{"id":"5a12f0560cf26485445ec455","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f0510cf26485445ec451/credentials/5a12f0560cf26485445ec455","clientID":"7d38dac3-6a92-4796-8103-5505ce85a7df","clientSecret":null}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":"","oauthRedirectURI":"http://asd.cl","certificate":null,"createdAt":"2017-11-20T15:10:14.408+0000","updatedAt":"2017-11-20T15:10:14.408+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f0510cf26485445ec451"},{"type":"PRODUCTION","promoteTo":null,"id":"5a12f08a0cf26485445ec496","name":"DemoApp3","orgID":"SAMPLE_ORG_ID","public":false,"description":"Eso
+        eso","credentials":{"clientID":"c1a668f1-2784-4ed4-a2f6-4097c091bcc9","clientSecret":null,"description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f08a0cf26485445ec496/credentials"},"appCredentials":[{"id":"5a12f08b0cf26485445ec497","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f08a0cf26485445ec496/credentials/5a12f08b0cf26485445ec497","clientID":"c1a668f1-2784-4ed4-a2f6-4097c091bcc9","clientSecret":null}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":"","oauthRedirectURI":"http://asd.cl","certificate":null,"createdAt":"2017-11-20T15:11:07.966+0000","updatedAt":"2017-11-20T15:11:07.966+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f08a0cf26485445ec496"},{"type":"PRODUCTION","promoteTo":null,"id":"5a12f0b20cf26485445ec4ad","name":"DemoApp4","orgID":"SAMPLE_ORG_ID","public":false,"description":"Eso
+        eso","credentials":{"clientID":"c1174c50-0bff-47e0-ac8c-f9da53468a86","clientSecret":"********************************************","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f0b20cf26485445ec4ad/credentials"},"appCredentials":[{"id":"5a12f0b80cf26485445ec4ae","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f0b20cf26485445ec4ad/credentials/5a12f0b80cf26485445ec4ae","clientID":"c1174c50-0bff-47e0-ac8c-f9da53468a86","clientSecret":"********************************************"}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":"","oauthRedirectURI":"http://asd.cl","certificate":null,"createdAt":"2017-11-20T15:11:52.343+0000","updatedAt":"2017-11-20T15:11:52.343+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f0b20cf26485445ec4ad"},{"type":"PRODUCTION","promoteTo":null,"id":"5a12f1460cf26485445ec4fd","name":"DemoApp5","orgID":"SAMPLE_ORG_ID","public":false,"description":"Eso
+        eso","credentials":{"clientID":"f01178d9-0dfc-44c8-ab78-2eff00bc038e","clientSecret":"********************************************","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f1460cf26485445ec4fd/credentials"},"appCredentials":[{"id":"5a12f1550cf26485445ec541","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f1460cf26485445ec4fd/credentials/5a12f1550cf26485445ec541","clientID":"f01178d9-0dfc-44c8-ab78-2eff00bc038e","clientSecret":"********************************************"}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":"","oauthRedirectURI":"http://asd.cl","certificate":null,"createdAt":"2017-11-20T15:14:29.052+0000","updatedAt":"2017-11-20T15:14:29.052+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f1460cf26485445ec4fd"},{"type":"PRODUCTION","promoteTo":null,"id":"5a12f1910cf26485445ec545","name":"DemoApp6","orgID":"SAMPLE_ORG_ID","public":false,"description":"Eso
+        eso","credentials":{"clientID":"4241a3cf-3351-4bc6-b151-f1497713aaf8","clientSecret":"********************************************","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f1910cf26485445ec545/credentials"},"appCredentials":[{"id":"5a12f1a60cf26485445ec54c","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f1910cf26485445ec545/credentials/5a12f1a60cf26485445ec54c","clientID":"4241a3cf-3351-4bc6-b151-f1497713aaf8","clientSecret":"********************************************"}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":"","oauthRedirectURI":"http://asd.cl","certificate":null,"createdAt":"2017-11-20T15:15:50.565+0000","updatedAt":"2017-11-20T15:15:50.565+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/5a12f1910cf26485445ec545"}]'
+    http_version: 
+  recorded_at: Tue, 21 Nov 2017 13:38:51 GMT
+recorded_with: VCR 3.0.3
