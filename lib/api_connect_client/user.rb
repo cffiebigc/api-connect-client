@@ -12,5 +12,6 @@ module ApiConnectClient
     def get_info
       get("/me", @username, @password)
     end
+ 
   end
 end
