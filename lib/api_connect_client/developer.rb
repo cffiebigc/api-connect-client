@@ -82,7 +82,8 @@ module ApiConnectClient
     end
 
     def get_profile_information
-      get("/me")
+      user = ApiConnectClient::User.new(@username, @password)
+      user.get_info
     end
   end
 end
