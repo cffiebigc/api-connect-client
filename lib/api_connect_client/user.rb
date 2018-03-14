@@ -12,6 +12,10 @@ module ApiConnectClient
     def get_info
       get("/me", @username, @password)
     end
- 
+
+    def list_organizations
+      get("/orgs", @username, @password)
+    end
+
   end
 end

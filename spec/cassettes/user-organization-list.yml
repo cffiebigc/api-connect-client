@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.apiconnect.ibmcloud.com/v1/portal/orgs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - us.apiconnect.ibmcloud.com
+      Authorization:
+      - Basic bXltYWlsQGRvbWFpbi5jb206TFlWZWpDbVc3YWJGekE9PQ==
+      X-Ibm-Apimanagement-Context:
+      - BLUEMIX_CONTEXT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Mar 2018 20:49:04 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Pragma:
+      - No-cache
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      X-Apim:
+      - 169.53.32.134
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"roles":["5aa93baa0cf22d60c157bdac"],"id":"5aa93baa0cf22d60c157bdab","name":"mymail@domain.com","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/5aa93baa0cf22d60c157bdab","owner":true}]'
+    http_version:
+  recorded_at: Wed, 14 Mar 2018 20:49:04 GMT
+recorded_with: VCR 4.0.0

@@ -85,5 +85,10 @@ module ApiConnectClient
       user = ApiConnectClient::User.new(@username, @password)
       user.get_info
     end
+
+    def list_organizations
+      user = ApiConnectClient::User.new(@username, @password)
+      user.list_organizations
+    end
   end
 end
