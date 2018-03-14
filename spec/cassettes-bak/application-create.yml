@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps
+    body:
+      encoding: UTF-8
+      string: '{"name":"Demo","credentials":{"clientID":true,"clientSecret":true},"description":"demo
+        app","oauthRedirectURI":"https://demo.cl","public":false}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - us.apiconnect.ibmcloud.com
+      Authorization:
+      - Basic U0FNUExFX1VTRVJOQU1FOlNBTVBMRV9QQVNTV09SRA==
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 21 Nov 2017 14:05:43 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Content-Location:
+      - https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      X-Apim:
+      - 169.55.21.17
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"PRODUCTION","promoteTo":null,"id":"SAMPLE_APP_ID","name":"Demo","orgID":"SAMPLE_ORG_ID","public":false,"description":"demo
+        app","credentials":{"clientID":"f08f8a08-7bb8-4172-9f0e-8ab824d2d6f1","clientSecret":"W1hT3nJ0gG7mU6lT5oN6oC6eD7xB8bP0xS6nN2uQ4pQ2dQ3fG8","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID/credentials"},"appCredentials":[{"id":"5a1432b60cf2cc3097526007","description":"Default","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID/credentials/5a1432b60cf2cc3097526007","clientID":"f08f8a08-7bb8-4172-9f0e-8ab824d2d6f1","clientSecret":"W1hT3nJ0gG7mU6lT5oN6oC6eD7xB8bP0xS6nN2uQ4pQ2dQ3fG8"}],"enabled":true,"state":"ACTIVE","imageURL":null,"appImageURL":null,"oauthRedirectURI":"https://demo.cl","certificate":null,"createdAt":"2017-11-21T14:05:42.982+0000","updatedAt":"2017-11-21T14:05:42.982+0000","url":"https://us.apiconnect.ibmcloud.com/v1/portal/orgs/SAMPLE_ORG_ID/apps/SAMPLE_APP_ID"}'
+    http_version:
+  recorded_at: Tue, 21 Nov 2017 14:05:43 GMT
+recorded_with: VCR 3.0.3

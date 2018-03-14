@@ -20,4 +20,5 @@ RSpec.describe ApiConnectClient::Api do
       expect(result["swagger"]).to eq("2.0")
     end
   end
+
 end

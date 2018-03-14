@@ -80,5 +80,15 @@ module ApiConnectClient
       app = ApiConnectClient::Application.new(@@organization_id, @username, @password)
       app.unsubscribe(app_id, subscription_id)
     end
+
+    def get_profile_information
+      user = ApiConnectClient::User.new(@username, @password)
+      user.get_info
+    end
+
+    def list_organizations
+      user = ApiConnectClient::User.new(@username, @password)
+      user.list_organizations
+    end
   end
 end
