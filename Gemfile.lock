@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    api_connect_client (0.1.2)
+    api_connect_client (0.2.0)
       json (~> 2.1, >= 2.1.0)
 
 GEM
