@@ -1,6 +1,6 @@
-[![Gem Version](https://badge.fury.io/rb/api_connect_client.svg)](https://badge.fury.io/rb/api_connect_client)
 
-# Api Connect Client
+
+# Api Connect Client [![Build Status](https://travis-ci.org/cffiebig/api-connect-client.svg?branch=master)](https://travis-ci.org/cffiebigc/api-connect-client) [![Gem Version](https://badge.fury.io/rb/api_connect_client.svg)](https://badge.fury.io/rb/api_connect_client)
 
 This gem is used to interact with the [Developer Portal REST APIs](https://www.ibm.com/support/knowledgecenter/en/SSFS6T/com.ibm.apic.apirest.doc/dev_portal_apis.html)
  to perform some of the operations that are normally carried out in the Developer Portal UI.
@@ -53,6 +53,7 @@ Once you have configured your context you can interact with the APIs in two diff
   * Update application information
   * Update application credentials
   * Subscribe application to a plan
+  * List public APIs and a specific swagger spec
 
 ### Initialize manager
 
@@ -165,6 +166,16 @@ developer.update_application_credentials(app_id, client_id, client_secret)
 ```ruby
 developer.subscribe_application(app_id, product_id, plan = 'default')
 ```
+
+#### List API and a specific swagger spec
+```ruby
+api.list_public_apis
+```
+
+```ruby
+api.get_swagger_from_public_api "5a956c490cf23b2cf8eacfbe"
+```
+
 
 ## Development
 

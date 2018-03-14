@@ -4,6 +4,7 @@ require_relative './support/product_helper'
 require 'pry'
 require 'webmock/rspec'
 require 'vcr'
+require 'dotenv/load'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/cassettes"

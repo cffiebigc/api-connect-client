@@ -22,6 +22,12 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.3.0'
 
   spec.add_runtime_dependency "json", '~> 2.1', '>= 2.1.0'
+  spec.add_development_dependency "rspec", '~> 3.7'
+  spec.add_development_dependency "pry", '~> 0.11'
+  spec.add_development_dependency "webmock", '~> 3.3'
+  spec.add_development_dependency "vcr", '~> 4.0'
+  spec.add_development_dependency "dotenv", '~> 2.2'
+  spec.add_development_dependency "rake", '~> 12.3'
 
   spec.requirements << 'IBM Cloud account (a.k.a bluemix)'
   spec.requirements << 'Api Connect product in IBM Cloud'
