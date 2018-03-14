@@ -1,5 +1,13 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.3.3
+- 2.3.3
 before_install: gem install bundler -v 1.16.0.pre.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: EGxw9J15avbiDJsAXw6hJiW5WN1FAzLmkOcM2rvAUWCNWUqWa8HvfgYyxmK8TmSRkj9zEyxBBFM03qTdNGxtFNetT1FUNM7Jo9t0bpDgKc3cmZxGRDVj96dTP2LRUIci4p69jmTXTOANnRAmOd0+/C4IOqUDAdXZ4YRnCTzP/80DC0V/AJ8NCNabPYfKiP7X0I7FfIP02ftrozanVTeNrAZqSo43N6bmiJp49MZDXPfUNnvV45D69G9GmhHqv91fvo7HrqL2qE5EkEr67MzHSJ2pwNpSG14zEqIuvmhZ3NXP67Oxil8SaJv4dtTe1Huo2jVC1CXllO25LoQDnGVQy4o2IGIcmHI5qhO6EVXhN8Q+sOTjlO+289jXLkGx7yHmsjRTXwk/1NZ+VU4jn8mR2tH0IGWH2bLsiDzZ3LdA29Nx5gdDUlHrwgHqW1AqPaqQLuiVSFx8EyuX/dJAxdorC2osRbGmRnC7Gz0MmrQ8uRDEDhBBniRn699NNrJ1+DaNN6izwvEfMRDMaEVVNxFv9clyPh1wVKQp5WGK5YXY9nPd05A+cVfyOgLKmP9PVsDo7xnNAt+RWgU7Yk9eSeKuzUffWtiSClSIPpyg/I7hK36s/n/pDDUSrN1K9nzGpvyGP6DDx++1SnppLjBEZlT2H9Ry9HzbGIN8LPXDwjFmhk4=
+  gem: api_connect_client
+  on:
+    tags: true
+    repo: cffiebigc/api-connect-client
