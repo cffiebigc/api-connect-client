@@ -10,8 +10,8 @@ RSpec.describe Product do
   end
 
   describe '#show' do
-    it "return a specific product", vcr: { cassette_name: 'product-show' }
-    result = product.show("5a0211480cf2b9aa64c1fd5d")
+    it "return a specific product", vcr: { cassette_name: 'product-show' } do
+      result = product.show("5a0211480cf2b9aa64c1fd5d")
       expect(result["info"]["name"]).to eq("beneficios")
     end
   end
