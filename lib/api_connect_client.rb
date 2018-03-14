@@ -7,5 +7,6 @@ module ApiConnectClient
   require_relative './api_connect_client/application'
   require_relative './api_connect_client/manager'
   require_relative './api_connect_client/developer'
+  require_relative './api_connect_client/api'
   require_relative './api_connect_client/config'
 end
