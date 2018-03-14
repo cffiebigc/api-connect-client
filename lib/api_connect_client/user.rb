@@ -1,16 +1,16 @@
 module ApiConnectClient
   class User < Base
-    def initialize(admin_user, admin_pass)
+    def initialize(username, password)
       super()
       @headers = {
         'X-IBM-APIManagement-Context': ApiConnectClient::Config.context
       }
-      @admin_user = admin_user
-      @admin_pass = admin_pass
+      @username = username
+      @password = password
     end
 
-    def create(body)
-      post('/users/register', body, @admin_user, @admin_pass)
+    def get_info
+      get("/me", @username, @password)
     end
   end
 end

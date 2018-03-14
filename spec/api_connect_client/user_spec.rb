@@ -1,20 +1,16 @@
 require 'spec_helper'
 
 RSpec.describe ApiConnectClient::User do
-  let(:user) { ApiConnectClient::User.new(ENV['ADMIN_USERNAME'], ENV['ADMIN_PASSWORD']) }
+	let(:user) { ApiConnectClient::User.new('mymail@domain.com', 'LYVejCmW7abFzA==') }
 
-  describe '#create', vcr: { cassette_name: 'user-new' } do
-    it "returns the info of the newly created user" do
-      body = {
-        "firstName" => "Test",
-        "lastName" => "Ter",
-        "organization" => "tester",
-        "password" => "Asd123%",
-        "username" => "tester@test.com"
-      }
-      result = user.create(body.to_json)
-      expect(result['firstName']).to eq('Test')
-      expect(result['email']).to eq('tester@test.com')
+  before(:all) do
+    ApiConnectClient::Config.register_context (ENV['BLUEMIX_CONTEXT'] || 'BLUEMIX_CONTEXT')
+  end
+
+  describe '#get_info', vcr: { cassette_name: 'user-profile' } do
+    it "returns the info of the connected user" do
+      result = user.get_info
+      expect(result['name']).to eq('mymail@domain.com')
     end
   end
 end

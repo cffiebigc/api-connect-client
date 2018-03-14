@@ -13,8 +13,8 @@ module ApiConnectClient
         "password" => password,
         "username" => username
       }
-      user = ApiConnectClient::User.new(@admin_user, @admin_pass)
-      user.create(body.to_json)
+      admin = ApiConnectClient::Admin.new(@admin_user, @admin_pass)
+      admin.register_developer(body.to_json)
     end
 
     def list_products
