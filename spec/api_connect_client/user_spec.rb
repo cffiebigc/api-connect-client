@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe User do
-	let(:user) { User.new(ENV['ADMIN_USERNAME'], ENV['ADMIN_PASSWORD']) }
+RSpec.describe ApiConnectClient::User do
+	let(:user) { ApiConnectClient::User.new(ENV['ADMIN_USERNAME'] || 'ADMIN_USERNAME', ENV['ADMIN_PASSWORD'] || 'ADMIN_PASSWORD') }
 
   describe '#create', vcr: { cassette_name: 'user-new' } do
     it "returns the info of the newly created user" do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Product do
+RSpec.describe ApiConnectClient::Product do
 	let(:product) { described_class.new }
 
   describe '#all', vcr: { cassette_name: 'products' } do
@@ -9,10 +9,10 @@ RSpec.describe Product do
     end
   end
 
-  describe '#show' do 
-  	it "return a specific product", vcr: { cassette_name: 'product-show' } do 
+  describe '#show' do
+  	it "return a specific product", vcr: { cassette_name: 'product-show' } do
   		result = product.show("5a0211480cf2b9aa64c1fd5d")
   		expect(result["info"]["name"]).to eq("beneficios")
-  	end	
+  	end
   end
 end
