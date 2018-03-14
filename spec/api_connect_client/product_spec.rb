@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Product do
+RSpec.describe ApiConnectClient::Product do
   let(:product) { described_class.new }
 
   describe '#all', vcr: { cassette_name: 'products' } do
