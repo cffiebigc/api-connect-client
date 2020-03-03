@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock", '~> 3.3'
   spec.add_development_dependency "vcr", '~> 4.0'
   spec.add_development_dependency "dotenv", '~> 2.2'
-  spec.add_development_dependency "rake", '~> 12.3'
+  spec.add_development_dependency "rake", '~> 13.0'
 
   spec.requirements << 'IBM Cloud account (a.k.a bluemix)'
   spec.requirements << 'Api Connect product in IBM Cloud'
